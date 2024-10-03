@@ -8,12 +8,13 @@
     </div>
     <div class="cms mw6">
       <p>{{ .Description }}</p>
-      
-      {{ range .Params.images }}
-    {{ with .Resources.Get .image }}
-        <h2>{{.Descrition}} hello</h2>
-    {{ end }}
+
+      {{ with .Params.images }}
+  {{ range . }}
+    <img src="{{ .image | relURL }}" alt="{{ .description }}">
+  {{ end }}
 {{ end }}
+
       {{ .Content }}
     </div>
   </div>

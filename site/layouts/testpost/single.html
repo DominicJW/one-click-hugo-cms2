@@ -10,7 +10,7 @@
       <p>{{ .Description }}</p>
       
       {{ range .Params.images }}
-    {{ with .image }}
+    {{ with .Resources.Get .Params.image }}
         <img src="{{ .RelPermalink }}" alt="{{ $.Title }} - {{ .Description }}" />
     {{ end }}
 {{ end }}

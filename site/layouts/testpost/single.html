@@ -11,7 +11,7 @@
 
       {{ with .Params.images }}
   {{ range . }}
-    <img src="{{ .image | relURL }}" alt="{{ .description }}">
+    <img src="{{ .image | relURL }}" alt="{{ .Description }}">
   {{ end }}
 {{ end }}
 
